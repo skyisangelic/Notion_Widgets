@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .date-container {
+            font-family: "Nunito", sans-serif;
+            font-size: 5vw; /* Dynamic font size based on viewport width */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            background-color: transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="date-container">
+        <script>
+            var currentDate = new Date();
+            var month = currentDate.toLocaleString('default', { month: 'long' });
+            var day = currentDate.getDate();
+            var weekDay = currentDate.toLocaleString('default', { weekday: 'long' });
+            document.write(month + ' ' + day + ' | ' + weekDay);
+        </script>
+    </div>
+</body>
+</html>
